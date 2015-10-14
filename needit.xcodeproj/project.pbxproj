@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		77F6926E6A3EFA1076C5B6B6 /* Pods_needitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E534DC2C1DE77B08E248CE4C /* Pods_needitUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7A86FC2ECC3391E253D28554 /* Pods_needit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8E8318968C2344BC7F813B /* Pods_needit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		803DB6F61BCE1F40002DE5B2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DB6F51BCE1F40002DE5B2 /* Brand.swift */; settings = {ASSET_TAGS = (); }; };
+		803DB6F91BCE2229002DE5B2 /* Starbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803DB6F81BCE2229002DE5B2 /* Starbucks.jpg */; settings = {ASSET_TAGS = (); }; };
+		809F583C1BCE236000EFA061 /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F583B1BCE236000EFA061 /* SwiftColors.swift */; settings = {ASSET_TAGS = (); }; };
+		809F583E1BCE295900EFA061 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F583D1BCE295900EFA061 /* Item.swift */; settings = {ASSET_TAGS = (); }; };
+		809F58401BCE29BE00EFA061 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F583F1BCE29BE00EFA061 /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
+		809F58441BCE2C0700EFA061 /* ComfyCow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 809F58411BCE2C0700EFA061 /* ComfyCow.jpg */; settings = {ASSET_TAGS = (); }; };
+		809F58451BCE2C0700EFA061 /* FallsCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F58421BCE2C0700EFA061 /* FallsCity.png */; settings = {ASSET_TAGS = (); }; };
+		809F58461BCE2C0700EFA061 /* WildEggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 809F58431BCE2C0700EFA061 /* WildEggs.jpg */; settings = {ASSET_TAGS = (); }; };
+		809F58491BCE790A00EFA061 /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F58481BCE790A00EFA061 /* WhereViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		809F584B1BCE793700EFA061 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F584A1BCE793700EFA061 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		809F584D1BCE795D00EFA061 /* OrderStatusInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F584C1BCE795D00EFA061 /* OrderStatusInputViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80CF43BF1BC95EAA00451183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF43BE1BC95EAA00451183 /* AppDelegate.swift */; };
 		80CF43C11BC95EAA00451183 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF43C01BC95EAA00451183 /* ViewController.swift */; };
 		80CF43C41BC95EAA00451183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80CF43C21BC95EAA00451183 /* Main.storyboard */; };
@@ -43,6 +54,17 @@
 		457FB677DBA4061F3FF2C364 /* Pods-needit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-needit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-needit/Pods-needit.debug.xcconfig"; sourceTree = "<group>"; };
 		60CA32DE4151ECF783A4B53F /* Pods-needit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-needit.release.xcconfig"; path = "Pods/Target Support Files/Pods-needit/Pods-needit.release.xcconfig"; sourceTree = "<group>"; };
 		641E855186FBEABBB4A36A40 /* Pods-needitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-needitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-needitTests/Pods-needitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		803DB6F51BCE1F40002DE5B2 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		803DB6F81BCE2229002DE5B2 /* Starbucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starbucks.jpg; sourceTree = "<group>"; };
+		809F583B1BCE236000EFA061 /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
+		809F583D1BCE295900EFA061 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		809F583F1BCE29BE00EFA061 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		809F58411BCE2C0700EFA061 /* ComfyCow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ComfyCow.jpg; sourceTree = "<group>"; };
+		809F58421BCE2C0700EFA061 /* FallsCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FallsCity.png; sourceTree = "<group>"; };
+		809F58431BCE2C0700EFA061 /* WildEggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WildEggs.jpg; sourceTree = "<group>"; };
+		809F58481BCE790A00EFA061 /* WhereViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereViewController.swift; sourceTree = "<group>"; };
+		809F584A1BCE793700EFA061 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		809F584C1BCE795D00EFA061 /* OrderStatusInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatusInputViewController.swift; sourceTree = "<group>"; };
 		80CF43BB1BC95EAA00451183 /* needit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = needit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CF43BE1BC95EAA00451183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80CF43C01BC95EAA00451183 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +126,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		803DB6F71BCE216D002DE5B2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				809F58411BCE2C0700EFA061 /* ComfyCow.jpg */,
+				809F58421BCE2C0700EFA061 /* FallsCity.png */,
+				809F58431BCE2C0700EFA061 /* WildEggs.jpg */,
+				803DB6F81BCE2229002DE5B2 /* Starbucks.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		809F583A1BCE235A00EFA061 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				809F583B1BCE236000EFA061 /* SwiftColors.swift */,
+				809F583F1BCE29BE00EFA061 /* Utilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		809F58471BCE78EE00EFA061 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				80CF43EC1BC962ED00451183 /* MainViewController.swift */,
+				809F58481BCE790A00EFA061 /* WhereViewController.swift */,
+				809F584A1BCE793700EFA061 /* LoginViewController.swift */,
+				809F584C1BCE795D00EFA061 /* OrderStatusInputViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		80CF43B21BC95EAA00451183 = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +182,17 @@
 		80CF43BD1BC95EAA00451183 /* needit */ = {
 			isa = PBXGroup;
 			children = (
+				809F58471BCE78EE00EFA061 /* ViewControllers */,
+				809F583A1BCE235A00EFA061 /* Utilities */,
+				803DB6F71BCE216D002DE5B2 /* Images */,
 				80CF43BE1BC95EAA00451183 /* AppDelegate.swift */,
 				80CF43C01BC95EAA00451183 /* ViewController.swift */,
-				80CF43EC1BC962ED00451183 /* MainViewController.swift */,
 				80CF43C21BC95EAA00451183 /* Main.storyboard */,
 				80CF43C51BC95EAA00451183 /* Assets.xcassets */,
 				80CF43C71BC95EAA00451183 /* LaunchScreen.storyboard */,
 				80CF43CA1BC95EAA00451183 /* Info.plist */,
+				809F583D1BCE295900EFA061 /* Item.swift */,
+				803DB6F51BCE1F40002DE5B2 /* Brand.swift */,
 			);
 			path = needit;
 			sourceTree = "<group>";
@@ -280,8 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				80CF43C91BC95EAA00451183 /* LaunchScreen.storyboard in Resources */,
+				809F58451BCE2C0700EFA061 /* FallsCity.png in Resources */,
 				80CF43C61BC95EAA00451183 /* Assets.xcassets in Resources */,
+				809F58441BCE2C0700EFA061 /* ComfyCow.jpg in Resources */,
+				803DB6F91BCE2229002DE5B2 /* Starbucks.jpg in Resources */,
 				80CF43C41BC95EAA00451183 /* Main.storyboard in Resources */,
+				809F58461BCE2C0700EFA061 /* WildEggs.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +490,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809F584D1BCE795D00EFA061 /* OrderStatusInputViewController.swift in Sources */,
+				809F584B1BCE793700EFA061 /* LoginViewController.swift in Sources */,
 				80CF43ED1BC962ED00451183 /* MainViewController.swift in Sources */,
+				803DB6F61BCE1F40002DE5B2 /* Brand.swift in Sources */,
+				809F58401BCE29BE00EFA061 /* Utilities.swift in Sources */,
 				80CF43C11BC95EAA00451183 /* ViewController.swift in Sources */,
 				80CF43BF1BC95EAA00451183 /* AppDelegate.swift in Sources */,
+				809F583E1BCE295900EFA061 /* Item.swift in Sources */,
+				809F58491BCE790A00EFA061 /* WhereViewController.swift in Sources */,
+				809F583C1BCE236000EFA061 /* SwiftColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

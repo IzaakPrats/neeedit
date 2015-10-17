@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Item {
+class BrandItem {
     
     let name: String
     let brand: Brand?

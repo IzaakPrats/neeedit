@@ -23,7 +23,9 @@ class MainViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    @IBOutlet weak var orderStatusClicked: UIButton!
+    @IBAction func orderStatusButtonClicked() {
+        
+    }
     
     
     // Class Vars
@@ -33,22 +35,30 @@ class MainViewController: UIViewController, UITextViewDelegate {
     
     var timer = NSTimer()
     
-    var placeholder = "Input your need here..."
+    var placeholder = "Tell us what you need here..."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        delay(2.0) {
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "cycleOptions", userInfo: nil, repeats: true)
-            
-            NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
-        }
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        // No branding yet.
+        // beginBrandLoop()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func beginBrandLoop() {
+        delay(2.0) {
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "cycleOptions", userInfo: nil, repeats: true)
+            
+            NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
+        }
     }
     
     func cycleOptions() {
@@ -92,11 +102,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
             needLabel.textColor = UIColor.blackColor()
             
             if (needTextView.text == placeholder) {
-                needTextView.text = "Input your need here..."
+                needTextView.text = "Tell us what you need here..."
                 needTextView.textColor = UIColor.blackColor().colorWithAlphaComponent(0.35)
             }
             
-            placeholder = "Input your need here..."
+            placeholder = "Tell us what you need here..."
             
             logoImageView.image = nil
             
@@ -124,7 +134,8 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 textView.resignFirstResponder()
                 
                 needTextView.text = placeholder
-                needTextView.textColor = UIColor.blackColor().colorWithAlphaComponent(0.35)
+                needTextView.textColor = UIColor.whiteColor().colorWithAlphaComponent(0.65)
+                
             } else {
                 
                 let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhereViewController") as! WhereViewController
@@ -137,11 +148,14 @@ class MainViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        delay(2.0) {
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "cycleOptions", userInfo: nil, repeats: true)
+        if(textView.text == "") {
+            textView.resignFirstResponder()
             
-            NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
+            needTextView.text = placeholder
+            needTextView.textColor = UIColor.whiteColor().colorWithAlphaComponent(0.65)
+            
         }
+        // beginBrandLoop()
     }
     
     func normalizeTextColor(textColor: UIColor) -> UIColor {
@@ -159,6 +173,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 Int64(delay * Double(NSEC_PER_SEC))
             ),
             dispatch_get_main_queue(), closure)
+    }
+    
+    
+    func dismissKeyboard() {
+        needTextView.endEditing(true)
     }
     
 }

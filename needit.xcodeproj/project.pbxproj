@@ -31,6 +31,9 @@
 		80CF43ED1BC962ED00451183 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF43EC1BC962ED00451183 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80D2B9341BCF52BD008CD6F0 /* CustomerInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2B9331BCF52BD008CD6F0 /* CustomerInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		80EE62B01BD2D072009B0947 /* FeeInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE62AF1BD2D072009B0947 /* FeeInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		80EE62B21BD2E8AD009B0947 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE62B11BD2E8AD009B0947 /* ReviewOrderViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		80EE62B51BD2EB2E009B0947 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE62B41BD2EB2E009B0947 /* Order.swift */; settings = {ASSET_TAGS = (); }; };
+		80EE62B71BD2F564009B0947 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE62B61BD2F564009B0947 /* OrderItem.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF81D3C4F741578AC081403 /* Pods_needitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F73C25F5261602AD1A0D0A /* Pods_needitTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,9 @@
 		80CF43EC1BC962ED00451183 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		80D2B9331BCF52BD008CD6F0 /* CustomerInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerInformationViewController.swift; sourceTree = "<group>"; };
 		80EE62AF1BD2D072009B0947 /* FeeInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeeInformationViewController.swift; sourceTree = "<group>"; };
+		80EE62B11BD2E8AD009B0947 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewOrderViewController.swift; sourceTree = "<group>"; };
+		80EE62B41BD2EB2E009B0947 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		80EE62B61BD2F564009B0947 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		8A37333B7BEB1045C4026D9A /* Pods-needitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-needitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-needitTests/Pods-needitTests.release.xcconfig"; sourceTree = "<group>"; };
 		E534DC2C1DE77B08E248CE4C /* Pods_needitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_needitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA2147955E9162A91143E20 /* Pods-needitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-needitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-needitUITests/Pods-needitUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 				809F58481BCE790A00EFA061 /* WhereViewController.swift */,
 				80D2B9331BCF52BD008CD6F0 /* CustomerInformationViewController.swift */,
 				80EE62AF1BD2D072009B0947 /* FeeInformationViewController.swift */,
+				80EE62B11BD2E8AD009B0947 /* ReviewOrderViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 		80CF43BD1BC95EAA00451183 /* needit */ = {
 			isa = PBXGroup;
 			children = (
+				80EE62B31BD2E8D2009B0947 /* Models */,
 				80CF43BE1BC95EAA00451183 /* AppDelegate.swift */,
 				809F58471BCE78EE00EFA061 /* ViewControllers */,
 				809F583A1BCE235A00EFA061 /* Utilities */,
@@ -200,8 +208,6 @@
 				80CF43C51BC95EAA00451183 /* Assets.xcassets */,
 				80CF43C71BC95EAA00451183 /* LaunchScreen.storyboard */,
 				80CF43CA1BC95EAA00451183 /* Info.plist */,
-				809F583D1BCE295900EFA061 /* BrandItem.swift */,
-				803DB6F51BCE1F40002DE5B2 /* Brand.swift */,
 			);
 			path = needit;
 			sourceTree = "<group>";
@@ -222,6 +228,17 @@
 				80CF43E01BC95EAA00451183 /* Info.plist */,
 			);
 			path = needitUITests;
+			sourceTree = "<group>";
+		};
+		80EE62B31BD2E8D2009B0947 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				809F583D1BCE295900EFA061 /* BrandItem.swift */,
+				803DB6F51BCE1F40002DE5B2 /* Brand.swift */,
+				80EE62B41BD2EB2E009B0947 /* Order.swift */,
+				80EE62B61BD2F564009B0947 /* OrderItem.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		EA7B2A2878321103DEE094D3 /* Frameworks */ = {
@@ -501,10 +518,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				809F584D1BCE795D00EFA061 /* OrderStatusInputViewController.swift in Sources */,
+				80EE62B21BD2E8AD009B0947 /* ReviewOrderViewController.swift in Sources */,
+				80EE62B71BD2F564009B0947 /* OrderItem.swift in Sources */,
 				809F584B1BCE793700EFA061 /* LoginViewController.swift in Sources */,
 				80CF43ED1BC962ED00451183 /* MainViewController.swift in Sources */,
 				803DB6F61BCE1F40002DE5B2 /* Brand.swift in Sources */,
 				80D2B9341BCF52BD008CD6F0 /* CustomerInformationViewController.swift in Sources */,
+				80EE62B51BD2EB2E009B0947 /* Order.swift in Sources */,
 				809F58401BCE29BE00EFA061 /* Utilities.swift in Sources */,
 				80EE62B01BD2D072009B0947 /* FeeInformationViewController.swift in Sources */,
 				80CF43C11BC95EAA00451183 /* ViewController.swift in Sources */,

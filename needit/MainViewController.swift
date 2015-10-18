@@ -137,6 +137,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 needTextView.textColor = UIColor.whiteColor().colorWithAlphaComponent(0.65)
                 
             } else {
+                // Create new Order
+                Order.currentOrder.newOrder()
+                
+                // Add whatever the person typed into the current Order's arraylist of items.
+                Order.currentOrder.items.addObject(OrderItem(itemName: textView.text!, itemQuantity: 1))
                 
                 let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhereViewController") as! WhereViewController
                 self.navigationController?.presentViewController(nextViewController, animated: true, completion: nil)

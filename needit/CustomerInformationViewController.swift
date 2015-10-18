@@ -34,9 +34,7 @@ class CustomerInformationViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func showDeliveryFeeInfo() {
-        let feeDeliveryVC = FeeInformationViewController()
         
-        self.presentViewController(feeDeliveryVC, animated: true, completion: nil)
     }
     
     
@@ -50,11 +48,29 @@ class CustomerInformationViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let nameText = nameTextView.text {
+            Order.currentOrder.name = nameText }
+        
+        if let emailText = emailTextView.text {
+            Order.currentOrder.email = emailText
+        }
+
+        if let numbertext = numberTextView.text {
+            Order.currentOrder.phone = numbertext
+        }
+        
     }
     
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {

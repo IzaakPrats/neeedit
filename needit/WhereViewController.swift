@@ -55,6 +55,17 @@ class WhereViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let fromText = whereFromTextView.text {
+            Order.currentOrder.fromAddress = fromText }
+        
+        if let whereText = whereToTextView.text {
+            Order.currentOrder.toAddress = whereText
+        }
+        
+    }
+    
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         textView.text = ""
         

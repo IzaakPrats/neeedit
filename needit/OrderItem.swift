@@ -11,13 +11,13 @@ import UIKit
 
 class OrderItem {
     
-    var itemName: String
-    var itemQuantity: NSInteger
-    var itemDiscount: NSDecimal!
+    var name: String
+    var quantity: Int
+    var discount: Double!
     
-    init(itemName: String, itemQuantity: NSInteger) {
-        self.itemName = itemName
-        self.itemQuantity = itemQuantity
+    init(name: String, quantity: Int) {
+        self.name = name
+        self.quantity = quantity
     }
     
 }

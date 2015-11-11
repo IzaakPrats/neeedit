@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ReviewOrderViewController: UIViewController {
     
@@ -24,6 +25,26 @@ class ReviewOrderViewController: UIViewController {
         
         // DO STUFF
         
+        
+        
+        FirebaseUtils.singleton.getValidOrderId() { orderId in
+            
+            Order.currentOrder.id = orderId
+            
+            FirebaseUtils.singleton.pushCurrentOrder() { error in
+             
+                if error != nil {
+                    // THERE WAS AN ISSUE
+                } else {
+                    // THERE IS NO ISSUE, CARRY ON
+                    // GO TO THANKYOU SCREEN
+                    
+                   self.goToThankYou()
+                }
+                
+            }
+        }
+        
     }
     
     @IBAction func backButtonClicked() {
@@ -34,12 +55,12 @@ class ReviewOrderViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let thing = (Order.currentOrder.items[0] as! OrderItem).itemName
+        let thing = (Order.currentOrder.items[0] as! OrderItem).name
         let from = Order.currentOrder.fromAddress
         
         let to = Order.currentOrder.toAddress
         
-        let complete =  "I need \(thing) from \(from) delivered to \(to)."
+        let complete =  "I need \(thing) from \(from) delivered to \(to) "
         
         orderTextView.text = complete
         orderTextView.selectable = false
@@ -52,7 +73,7 @@ class ReviewOrderViewController: UIViewController {
     
     func createSentence() -> String {
         
-        let thing = (Order.currentOrder.items[0] as! OrderItem).itemName
+        let thing = (Order.currentOrder.items[0] as! OrderItem).name
         
         let from = Order.currentOrder.fromAddress
         
@@ -60,6 +81,12 @@ class ReviewOrderViewController: UIViewController {
         
         return "I need \(thing) from \(from) delivered to \(to)."
         
+    }
+    
+    func goToThankYou() {
+        let thankYouViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ThankYouViewController") as! ThankYouViewController
+        
+        self.presentViewController(thankYouViewController, animated: true, completion: nil)
     }
     
     

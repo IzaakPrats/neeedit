@@ -53,9 +53,17 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-needit/Alamofire.framework'
+  install_framework 'Pods-needit/Bolts.framework'
+  install_framework 'Pods-needit/FBSDKCoreKit.framework'
+  install_framework 'Pods-needit/FBSDKLoginKit.framework'
+  install_framework 'Pods-needit/FBSDKShareKit.framework'
   install_framework 'Pods-needit/Firebase.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-needit/Alamofire.framework'
+  install_framework 'Pods-needit/Bolts.framework'
+  install_framework 'Pods-needit/FBSDKCoreKit.framework'
+  install_framework 'Pods-needit/FBSDKLoginKit.framework'
+  install_framework 'Pods-needit/FBSDKShareKit.framework'
   install_framework 'Pods-needit/Firebase.framework'
 fi

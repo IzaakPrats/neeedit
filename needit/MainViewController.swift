@@ -141,7 +141,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 Order.currentOrder.newOrder()
                 
                 // Add whatever the person typed into the current Order's arraylist of items.
-                Order.currentOrder.items.addObject(OrderItem(itemName: textView.text!, itemQuantity: 1))
+                Order.currentOrder.items.addObject(OrderItem(name: textView.text!, quantity: 1))
                 
                 let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhereViewController") as! WhereViewController
                 self.navigationController?.presentViewController(nextViewController, animated: true, completion: nil)

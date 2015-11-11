@@ -58,19 +58,59 @@ class CustomerInformationViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
+        if (nameTextView.text == namePlaceholder) {
+            return false
+        }
+        
+        if (emailTextView.text == "" && numberTextView.text == numberPlaceholder) {
+            return false
+        }
+        
+        if (numberTextView.text == "" && emailTextView.text == emailPlaceholder) {
+            return false
+        }
+        
+        if (numberTextView.text == numberPlaceholder && emailTextView.text == emailPlaceholder) {
+            return false
+        }
+        
+        if (numberTextView.text == "" && emailTextView.text == "") {
+            return false
+        }
         
         if let nameText = nameTextView.text {
-            Order.currentOrder.name = nameText }
+            if (nameText == namePlaceholder) {
+                return false
+            } else {
+                Order.currentOrder.name = nameText
+            }
+        } else {
+            return false
+        }
+        
+        if let numberText = numberTextView.text {
+            if (numberText == numberPlaceholder || numberText == "") {
+                Order.currentOrder.phone = nil
+            } else {
+                Order.currentOrder.phone = numberText
+            }
+        } else {
+            return false
+        }
         
         if let emailText = emailTextView.text {
-            Order.currentOrder.email = emailText
-        }
-
-        if let numbertext = numberTextView.text {
-            Order.currentOrder.phone = numbertext
+            if (emailText == emailPlaceholder || emailText == "") {
+                Order.currentOrder.email = nil
+            } else {
+                Order.currentOrder.email = emailText
+            }
+        } else {
+            return false
         }
         
+        return true
     }
     
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {

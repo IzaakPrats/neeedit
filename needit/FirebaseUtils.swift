@@ -51,33 +51,27 @@ class FirebaseUtils {
     }
     
     func isUniqueId(id: String, completionHandler: (Bool) -> ()) {
-        print("isUnique")
-        
         let newRef = orderRef.childByAppendingPath(id)
         
         newRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 if snapshot.value is NSNull {
                     // The id is unique
-                     print("success2")
                     completionHandler(true)
                 } else {
                     // The id is not unique
-                     print("fail2")
                     completionHandler(false)
                 }
         })
     }
     
     func pushCurrentOrder(onComplete: (NSError?) -> ()) {
-        
         let orderDictionary = dictionaryForOrder(Order.currentOrder)
-        
         let orderPath = orderRef.childByAppendingPath(Order.currentOrder.id)
         
         orderPath.setValue(orderDictionary, withCompletionBlock: {
             (error:NSError?, ref:Firebase!) in
                 if (error != nil) {
-                    print("Firebase had an issue :(")
+                    print("Firebase had an issue")
                     onComplete(error)
                 } else {
                     onComplete(nil)
